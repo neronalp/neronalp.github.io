@@ -9,12 +9,12 @@
   --bg-navy-surface: #0c162d;
   
   /* Glass Surfaces */
-  --glass-bg: rgba(10, 18, 36, 0.68);
-  --glass-bg-hover: rgba(15, 26, 52, 0.82);
-  --glass-card: rgba(12, 22, 44, 0.58);
-  --glass-border: rgba(255, 255, 255, 0.07);
-  --glass-border-orange: rgba(249, 115, 22, 0.24);
-  --glass-border-hover: rgba(249, 115, 22, 0.55);
+  --glass-bg: rgba(10, 18, 36, 0.72);
+  --glass-bg-hover: rgba(16, 28, 56, 0.85);
+  --glass-card: rgba(12, 22, 44, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-orange: rgba(249, 115, 22, 0.28);
+  --glass-border-hover: rgba(249, 115, 22, 0.6);
   --glass-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.55);
   --glass-blur: blur(20px);
 
@@ -22,12 +22,12 @@
   --orange-primary: #f97316;
   --orange-secondary: #fb923c;
   --orange-deep: #ea580c;
-  --orange-glow: rgba(249, 115, 22, 0.35);
-  --orange-glow-subtle: rgba(249, 115, 22, 0.12);
+  --orange-glow: rgba(249, 115, 22, 0.4);
+  --orange-glow-subtle: rgba(249, 115, 22, 0.15);
   
   /* Deep Navy Accents */
   --navy-accent: #1e3a8a;
-  --navy-glow: rgba(30, 58, 138, 0.35);
+  --navy-glow: rgba(30, 58, 138, 0.4);
 
   /* Typography Colors */
   --color-fg-default: #f8fafc;
@@ -86,7 +86,6 @@ a:hover {
   animation: orbFloat 22s infinite alternate ease-in-out;
 }
 
-/* Deep Navy Orb */
 .orb-navy {
   width: 650px;
   height: 650px;
@@ -95,18 +94,16 @@ a:hover {
   left: -120px;
 }
 
-/* SynapsAura Orange Orb */
 .orb-orange {
-  width: 520px;
-  height: 520px;
+  width: 540px;
+  height: 540px;
   background: radial-gradient(circle, #f97316 0%, #c2410c 100%);
   bottom: 8%;
   right: -100px;
-  opacity: 0.22;
+  opacity: 0.24;
   animation-duration: 26s;
 }
 
-/* Ember Warm Pulse */
 .orb-ember {
   width: 450px;
   height: 450px;
@@ -148,7 +145,7 @@ a:hover {
 
 /* ================= Glassmorphic Header ================= */
 .gh-header {
-  background: rgba(7, 13, 30, 0.75);
+  background: rgba(7, 13, 30, 0.78);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
@@ -159,7 +156,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
 }
 
 .gh-header-left {
@@ -177,7 +174,7 @@ a:hover {
 
 .gh-logo:hover {
   transform: rotate(8deg) scale(1.08);
-  filter: drop-shadow(0 0 10px var(--orange-glow));
+  filter: drop-shadow(0 0 12px var(--orange-glow));
 }
 
 .gh-search-wrapper {
@@ -187,7 +184,7 @@ a:hover {
 }
 
 .gh-search {
-  background: rgba(2, 6, 23, 0.7);
+  background: rgba(2, 6, 23, 0.75);
   backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
@@ -215,7 +212,7 @@ a:hover {
 
 .gh-header-nav {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   font-weight: 500;
   font-size: 13.5px;
 }
@@ -367,7 +364,6 @@ a:hover {
   text-align: center;
 }
 
-/* Glass Buttons (SynapsAura Orange) */
 .btn-glass-primary {
   display: flex;
   align-items: center;
@@ -623,94 +619,6 @@ a:hover {
   transform: scale(1.03);
 }
 
-/* ================= Ecosystem & Social Cards Grid ================= */
-.eco-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  margin-bottom: 34px;
-}
-
-.eco-card {
-  background: var(--glass-card);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: 14px;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: all 0.25s ease;
-  text-decoration: none !important;
-  color: inherit;
-  position: relative;
-  overflow: hidden;
-}
-
-.eco-card:hover {
-  border-color: var(--glass-border-orange);
-  background: var(--glass-bg-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 16px var(--orange-glow-subtle);
-}
-
-.eco-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: rgba(7, 13, 30, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 22px;
-  transition: transform 0.2s;
-}
-
-.eco-card:hover .eco-icon-box {
-  transform: scale(1.1);
-  border-color: var(--orange-primary);
-}
-
-.eco-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.eco-name-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 2px;
-}
-
-.eco-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.eco-tag {
-  font-size: 10px;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 10px;
-  background: rgba(249, 115, 22, 0.12);
-  color: var(--orange-secondary);
-  border: 1px solid rgba(249, 115, 22, 0.2);
-}
-
-.eco-sub {
-  font-size: 12px;
-  color: var(--color-fg-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* ================= Activity Heatmap (SynapsAura Orange/Amber Gradient) ================= */
 .activity-card {
   background: var(--glass-card);
@@ -760,6 +668,144 @@ a:hover {
 .h-2 { background-color: #9a3412; box-shadow: 0 0 4px rgba(154, 52, 18, 0.4); }
 .h-3 { background-color: #c2410c; box-shadow: 0 0 6px rgba(194, 65, 12, 0.5); }
 .h-4 { background-color: #f97316; box-shadow: 0 0 8px rgba(249, 115, 22, 0.8); }
+
+/* ================= Expanding Ecosystem & Social Interactive Dock ================= */
+.eco-interactive-container {
+  margin-bottom: 34px;
+}
+
+.eco-dock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.eco-dock-item {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none !important;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.eco-dock-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at left center, var(--item-glow, rgba(249, 115, 22, 0.15)), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+
+.eco-dock-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--item-border, var(--glass-border-orange));
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5), 0 0 20px var(--item-glow, var(--orange-glow-subtle));
+  background: rgba(18, 30, 58, 0.88);
+}
+
+.eco-dock-item:hover::before {
+  opacity: 1;
+}
+
+/* Original Brand Logo Boxes */
+.eco-logo-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(7, 13, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s;
+}
+
+.eco-dock-item:hover .eco-logo-box {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 6px 18px var(--item-glow, rgba(0, 0, 0, 0.5));
+  border-color: var(--item-border, var(--orange-primary));
+}
+
+.eco-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.eco-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.eco-brand-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.eco-dock-item:hover .eco-brand-title {
+  color: var(--item-color, var(--orange-secondary));
+}
+
+.eco-brand-tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-fg-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s;
+}
+
+.eco-dock-item:hover .eco-brand-tag {
+  background: var(--item-tag-bg, rgba(249, 115, 22, 0.15));
+  color: var(--item-color, var(--orange-primary));
+  border-color: var(--item-border, rgba(249, 115, 22, 0.3));
+}
+
+.eco-desc-text {
+  font-size: 12.5px;
+  color: var(--color-fg-muted);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s;
+}
+
+.eco-dock-item:hover .eco-desc-text {
+  color: var(--color-fg-default);
+}
+
+.eco-arrow {
+  color: var(--color-fg-subtle);
+  font-size: 14px;
+  transition: transform 0.25s, color 0.25s;
+}
+
+.eco-dock-item:hover .eco-arrow {
+  transform: translateX(4px);
+  color: var(--item-color, var(--orange-primary));
+}
 
 /* ================= Markdown / Legal Styling ================= */
 .markdown-container {
