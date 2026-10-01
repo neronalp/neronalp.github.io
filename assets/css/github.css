@@ -66,7 +66,7 @@ a:hover {
   color: var(--orange-secondary);
 }
 
-/* ================= Ambient Glow Mesh Background (SynapsAura Orange & Lacivert) ================= */
+/* ================= Ambient Glow Mesh Background ================= */
 .ambient-glow-wrap {
   position: fixed;
   top: 0;
@@ -509,7 +509,6 @@ a:hover {
   --spotlight-y: 50%;
 }
 
-/* Moving Cursor Spotlight */
 .tilt-card::before {
   content: "";
   position: absolute;
@@ -639,14 +638,14 @@ a:hover {
   transform: translateX(4px);
 }
 
-/* ================= Activity Heatmap (SynapsAura Orange/Amber Gradient) ================= */
+/* ================= Activity Heatmap ================= */
 .activity-card {
   background: var(--glass-card);
   backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 22px;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .activity-header {
@@ -689,44 +688,39 @@ a:hover {
 .h-3 { background-color: #c2410c; box-shadow: 0 0 6px rgba(194, 65, 12, 0.5); }
 .h-4 { background-color: #f97316; box-shadow: 0 0 8px rgba(249, 115, 22, 0.8); }
 
-/* ================= Single Row Horizontal Expanding Dock ================= */
-.dock-section {
-  margin-bottom: 36px;
+/* ================= Zarif Ayırıcı Çizgi (Glowing Divider) ================= */
+.glow-divider {
+  height: 1px;
+  width: 100%;
+  margin: 36px auto 28px;
+  background: linear-gradient(90deg, transparent 0%, rgba(249, 115, 22, 0.45) 30%, rgba(30, 58, 138, 0.55) 70%, transparent 100%);
+  box-shadow: 0 0 16px rgba(249, 115, 22, 0.25);
+  border: none;
 }
 
-.dock-strip-container {
-  background: rgba(7, 13, 30, 0.65);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 12px 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.dock-strip {
+/* ================= YALIN & ORTALANMIŞ TEK SIRA LOGOLAR (Floating Dock) ================= */
+.centered-logo-dock {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 4px 0;
-  scrollbar-width: none; /* Firefox */
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0 auto 36px;
+  padding: 0;
 }
 
-.dock-strip::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
-/* Single Dock Item: Starts as compact icon box, expands smoothly on hover! */
+/* Sadece yüzen cam logo kutucuğu, üzerine gelince sağa doğru akıcı uzar */
 .dock-item {
   display: flex;
   align-items: center;
-  height: 52px;
-  width: 52px; /* Resting state: just square logo */
-  background: var(--glass-card);
-  border: 1px solid var(--glass-border);
+  height: 50px;
+  width: 50px; /* Dinlenme durumunda sadece temiz kare logo */
+  background: rgba(12, 22, 44, 0.65);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
-  padding: 0 10px;
+  padding: 0 9px;
   text-decoration: none !important;
   color: inherit;
   flex-shrink: 0;
@@ -737,39 +731,37 @@ a:hover {
               background 0.3s, 
               box-shadow 0.3s, 
               transform 0.3s;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .dock-item:hover {
-  width: 250px; /* Expands smoothly to the right! */
-  background: rgba(18, 30, 58, 0.95);
+  width: 220px; /* Sağa doğru akıcı şekilde uzar! */
+  background: rgba(18, 30, 58, 0.96);
   border-color: var(--dock-border, var(--orange-primary));
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 20px var(--dock-glow, var(--orange-glow-subtle));
-  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 22px var(--dock-glow, var(--orange-glow-subtle));
+  transform: translateY(-4px);
   z-index: 10;
 }
 
-/* Logo Image in Dock */
 .dock-logo {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .dock-item:hover .dock-logo {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
-/* Details that slide in when expanded */
 .dock-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 12px;
-  min-width: 155px;
+  margin-left: 10px;
+  min-width: 140px;
   opacity: 0;
   transform: translateX(-10px);
   transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -792,22 +784,22 @@ a:hover {
 }
 
 .dock-name {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
   color: #fff;
 }
 
 .dock-tag {
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 600;
-  padding: 1px 6px;
-  border-radius: 8px;
+  padding: 1px 5px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.08);
   color: var(--dock-color, var(--orange-primary));
 }
 
 .dock-sub {
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--color-fg-muted);
 }
 
@@ -897,10 +889,10 @@ a:hover {
   margin: 6px 0;
 }
 
-/* ================= Single Row Clean Footer ================= */
+/* ================= Tek Sıra Temiz Footer ================= */
 .gh-footer {
   border-top: 1px solid var(--glass-border);
-  background: rgba(7, 13, 30, 0.9);
+  background: rgba(7, 13, 30, 0.92);
   backdrop-filter: blur(14px);
   padding: 22px 30px;
   margin-top: auto;
