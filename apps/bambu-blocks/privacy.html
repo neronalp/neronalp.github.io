@@ -6,6 +6,7 @@
     <title>Bambu Blocks · Gizlilik Politikası (Privacy Policy) · neronalp</title>
     <link rel="stylesheet" href="../../assets/css/github.css">
     <link rel="icon" type="image/png" href="https://github.com/neronalp.png">
+<script src="../../assets/js/lang.js"></script>
 </head>
 <body>
 
@@ -29,13 +30,15 @@
                     <a href="../../index.html" style="color: var(--orange-primary); text-decoration: none;">neronalp</a> / <span>bambu-blocks</span> / <span>PRIVACY_POLICY.md</span>
                 </div>
             </div>
-            <div class="gh-header-right">
-                <a href="../../index.html" class="btn-pill">← Ana Vitrine Dön</a>
+            <div class="gh-header-right" style="display: flex; gap: 8px;">
+                <button type="button" class="btn-pill lang-toggle" onclick="toggleLang()">EN</button>
+                <a href="../../index.html" class="btn-pill" data-en="← Back to home">← Ana Vitrine Dön</a>
             </div>
         </header>
 
         <div style="max-width: 960px; width: 100%; margin: 40px auto; padding: 0 20px; flex: 1;">
             <div class="markdown-container">
+<div data-lang="tr">
                 <h1>Bambu Blocks — Gizlilik Politikası</h1>
                 <p><em>Son Güncelleme: 2 Ekim 2026</em></p>
 
@@ -129,7 +132,8 @@
                     <strong>Web:</strong> <a href="https://neronalp.github.io" style="color: var(--orange-primary);">https://neronalp.github.io</a>
                 </p>
 
-                <hr>
+                </div>
+<div data-lang="en">
 
                 <h1>Bambu Blocks — Privacy Policy</h1>
                 <p><em>Last updated: 2 October 2026</em></p>
@@ -217,14 +221,15 @@
                     <strong>Web:</strong> <a href="https://neronalp.github.io" style="color: var(--orange-primary);">https://neronalp.github.io</a>
                 </p>
             </div>
+            </div>
         </div>
 
         <footer class="gh-footer">
             <div>© 2026 Neron Studio (neronalp).</div>
             <ul class="gh-footer-links">
-                <li><a href="../../index.html">Ana Sayfa</a></li>
-                <li><a href="../../privacy-policy.html">Genel Gizlilik Politikası</a></li>
-                <li><a href="mailto:neron4design@gmail.com">İletişim</a></li>
+                <li><a href="../../index.html" data-en="Home">Ana Sayfa</a></li>
+                <li><a href="../../privacy-policy.html" data-en="General Privacy Policy">Genel Gizlilik Politikası</a></li>
+                <li><a href="mailto:neron4design@gmail.com" data-en="Contact">İletişim</a></li>
             </ul>
         </footer>
 

@@ -7,6 +7,7 @@
     <meta name="description" content="Bambu Blocks — 10x10 tahtada parça yerleştirme bulmacası. Doğa temalı, süresiz, çevrimdışı oynanır.">
     <link rel="stylesheet" href="../../assets/css/github.css">
     <link rel="icon" type="image/png" href="../../assets/icons/bambublocks.png">
+<script src="../../assets/js/lang.js"></script>
 </head>
 <body>
 
@@ -30,8 +31,9 @@
                     <a href="../../index.html" style="color: var(--orange-primary); text-decoration: none;">neronalp</a> / <span>bambu-blocks</span>
                 </div>
             </div>
-            <div class="gh-header-right">
-                <a href="../../index.html" class="btn-pill">← Ana Vitrine Dön</a>
+            <div class="gh-header-right" style="display: flex; gap: 8px;">
+                <button type="button" class="btn-pill lang-toggle" onclick="toggleLang()">EN</button>
+                <a href="../../index.html" class="btn-pill" data-en="← Back to home">← Ana Vitrine Dön</a>
             </div>
         </header>
 
@@ -44,24 +46,24 @@
                         <div>
                             <h1 style="font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 4px;">Bambu Blocks</h1>
                             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                                <span class="card-badge" style="background: rgba(127, 176, 105, 0.15); color: #9ccb7f; border-color: rgba(127, 176, 105, 0.3);">Android Oyun</span>
-                                <span style="font-size: 12px; color: var(--color-fg-muted);">Kapalı test aşamasında</span>
+                                <span class="card-badge" style="background: rgba(127, 176, 105, 0.15); color: #9ccb7f; border-color: rgba(127, 176, 105, 0.3);" data-en="Android Game">Android Oyun</span>
+                                <span style="font-size: 12px; color: var(--color-fg-muted);" data-en="In closed testing">Kapalı test aşamasında</span>
                             </div>
                         </div>
                     </div>
 
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="privacy.html" class="btn-pill">Gizlilik Politikası ↗</a>
-                        <span class="btn-pill" style="opacity: 0.55; cursor: default;">Google Play · yakında</span>
+                        <a href="privacy.html" class="btn-pill" data-en="Privacy Policy ↗">Gizlilik Politikası ↗</a>
+                        <span class="btn-pill" style="opacity: 0.55; cursor: default;" data-en="Google Play · coming soon">Google Play · yakında</span>
                     </div>
                 </div>
 
-                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 8px;">
+                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 8px;" data-en="Place pieces on a 10×10 board and clear rows and columns. No timer, no turns: the game ends when none of your three pieces fits, so every move is about leaving room for the next.">
                     10×10 tahtaya parça yerleştirip satır ve sütun patlatılan bir bulmaca.
                     Süre baskısı yok, tur yok — tahta dolduğunda biter. Elinizdeki üç parçanın
                     hiçbiri sığmıyorsa oyun sona erer, o yüzden her hamle sonrakine yer bırakmakla ilgilidir.
                 </p>
-                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 28px;">
+                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 28px;" data-en="A bamboo-forest theme, soft pastel blocks and synthesised wooden sounds make for a calm game. No internet needed, no account, and progress is kept only on your device.">
                     Bambu ormanı teması, yumuşak pastel bloklar ve sentezlenmiş ahşap sesleriyle
                     sakin bir sunum. İnternet bağlantısı gerekmez, hesap açılmaz, oyun ilerlemesi
                     yalnızca cihazda saklanır.
@@ -69,46 +71,46 @@
 
                 <div class="glow-divider"></div>
 
-                <h2 style="font-size: 18px; color: #fff; margin: 24px 0 14px;">Öne çıkanlar</h2>
+                <h2 style="font-size: 18px; color: #fff; margin: 24px 0 14px;" data-en="Highlights">Öne çıkanlar</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 28px;">
                     <div class="tech-tag" style="justify-content: flex-start;">
                         <span class="dot-indicator" style="background-color: #7fb069; box-shadow: 0 0 6px rgba(127,176,105,0.8);"></span>
-                        <span>50 seviye + sonsuz mod</span>
+                        <span data-en="50 levels + endless mode">50 seviye + sonsuz mod</span>
                     </div>
                     <div class="tech-tag" style="justify-content: flex-start;">
                         <span class="dot-indicator" style="background-color: #d9c067; box-shadow: 0 0 6px rgba(217,192,103,0.8);"></span>
-                        <span>3 yıldızlı derecelendirme</span>
+                        <span data-en="3-star ratings">3 yıldızlı derecelendirme</span>
                     </div>
                     <div class="tech-tag" style="justify-content: flex-start;">
                         <span class="dot-indicator" style="background-color: #4f8f6d; box-shadow: 0 0 6px rgba(79,143,109,0.8);"></span>
-                        <span>Çevrimdışı oynanır</span>
+                        <span data-en="Plays offline">Çevrimdışı oynanır</span>
                     </div>
                     <div class="tech-tag" style="justify-content: flex-start;">
                         <span class="dot-indicator" style="background-color: #6ba8c4; box-shadow: 0 0 6px rgba(107,168,196,0.8);"></span>
-                        <span>Türkçe ve İngilizce</span>
+                        <span data-en="English and Turkish">Türkçe ve İngilizce</span>
                     </div>
                 </div>
 
-                <h2 style="font-size: 18px; color: #fff; margin: 0 0 14px;">Ekran görüntüleri</h2>
+                <h2 style="font-size: 18px; color: #fff; margin: 0 0 14px;" data-en="Screenshots">Ekran görüntüleri</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;">
                     <div class="glass-panel" style="height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-style: dashed; color: var(--color-fg-subtle);">
                         <span style="font-size: 28px; margin-bottom: 8px;">🖼️</span>
-                        <span>Yakında</span>
+                        <span data-en="Coming soon">Yakında</span>
                     </div>
                     <div class="glass-panel" style="height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-style: dashed; color: var(--color-fg-subtle);">
                         <span style="font-size: 28px; margin-bottom: 8px;">🖼️</span>
-                        <span>Yakında</span>
+                        <span data-en="Coming soon">Yakında</span>
                     </div>
                     <div class="glass-panel" style="height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-style: dashed; color: var(--color-fg-subtle);">
                         <span style="font-size: 28px; margin-bottom: 8px;">🖼️</span>
-                        <span>Yakında</span>
+                        <span data-en="Coming soon">Yakında</span>
                     </div>
                 </div>
 
                 <div class="glow-divider" style="margin: 28px 0 20px;"></div>
 
-                <h2 style="font-size: 18px; color: #fff; margin: 0 0 12px;">Veri ve gizlilik</h2>
-                <p style="font-size: 14px; color: var(--color-fg-muted); line-height: 1.7;">
+                <h2 style="font-size: 18px; color: #fff; margin: 0 0 12px;" data-en="Data and privacy">Veri ve gizlilik</h2>
+                <p style="font-size: 14px; color: var(--color-fg-muted); line-height: 1.7;" data-en="The game opens no account, asks for no sign-up and collects no personal data. Score, level progress and settings are kept in the device&#x27;s own storage. The app shows ads; Google AdMob, which serves them, uses its own advertising ID. Details in the &lt;a href=&quot;privacy.html&quot; style=&quot;color: var(--orange-primary);&quot;&gt;privacy policy&lt;/a&gt;.">
                     Oyun hesap açmaz, kayıt istemez ve kişisel veri toplamaz. Skor, seviye
                     ilerlemesi ve ayarlar cihazın kendi deposunda tutulur. Uygulama reklam
                     gösterir; reklamları sunan Google AdMob kendi reklam kimliğini kullanır.
@@ -121,9 +123,9 @@
         <footer class="gh-footer">
             <div>© 2026 Neron Studio (neronalp).</div>
             <ul class="gh-footer-links">
-                <li><a href="../../index.html">Ana Vitrin</a></li>
-                <li><a href="privacy.html">Gizlilik Politikası</a></li>
-                <li><a href="mailto:neron4design@gmail.com">İletişim</a></li>
+                <li><a href="../../index.html" data-en="Home">Ana Vitrin</a></li>
+                <li><a href="privacy.html" data-en="Privacy Policy">Gizlilik Politikası</a></li>
+                <li><a href="mailto:neron4design@gmail.com" data-en="Contact">İletişim</a></li>
             </ul>
         </footer>
 

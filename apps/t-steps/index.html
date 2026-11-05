@@ -7,6 +7,7 @@
     <meta name="description" content="T-Steps — Health Connect ile çalışan adım sayar: günlük hedef, seri, seri koruma ve rozetler.">
     <link rel="stylesheet" href="../../assets/css/github.css">
     <link rel="icon" type="image/png" href="../../assets/icons/tsteps.png">
+<script src="../../assets/js/lang.js"></script>
 </head>
 <body>
 
@@ -30,8 +31,9 @@
                     <a href="../../index.html" style="color: var(--orange-primary); text-decoration: none;">neronalp</a> / <span>t-steps</span>
                 </div>
             </div>
-            <div class="gh-header-right">
-                <a href="../../index.html" class="btn-pill">← Ana Vitrine Dön</a>
+            <div class="gh-header-right" style="display: flex; gap: 8px;">
+                <button type="button" class="btn-pill lang-toggle" onclick="toggleLang()">EN</button>
+                <a href="../../index.html" class="btn-pill" data-en="← Back to home">← Ana Vitrine Dön</a>
             </div>
         </header>
 
@@ -44,49 +46,49 @@
                         <div>
                             <h1 style="font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 4px;">T-Steps</h1>
                             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                                <span class="card-badge" style="background: rgba(99, 210, 192, 0.15); color: #63d2c0; border-color: rgba(99, 210, 192, 0.3);">Android Fitness</span>
-                                <span style="font-size: 12px; color: var(--color-fg-muted);">Kapalı test aşamasında</span>
+                                <span class="card-badge" style="background: rgba(99, 210, 192, 0.15); color: #63d2c0; border-color: rgba(99, 210, 192, 0.3);" data-en="Android Fitness">Android Fitness</span>
+                                <span style="font-size: 12px; color: var(--color-fg-muted);" data-en="In closed testing">Kapalı test aşamasında</span>
                             </div>
                         </div>
                     </div>
 
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="privacy.html" class="btn-pill">Gizlilik Politikası ↗</a>
-                        <span class="btn-pill" style="opacity: 0.55; cursor: default;">Google Play · yakında</span>
+                        <a href="privacy.html" class="btn-pill" data-en="Privacy Policy ↗">Gizlilik Politikası ↗</a>
+                        <span class="btn-pill" style="opacity: 0.55; cursor: default;" data-en="Google Play · coming soon">Google Play · yakında</span>
                     </div>
                 </div>
 
-                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 8px;">
+                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 8px;" data-en="A simple step counter that reads your steps from your phone or watch through Health Connect. Set a daily goal; the days you hit it become a streak, and a streak freeze you have earned protects it on a day you miss.">
                     Adımlarını telefonundan ya da saatinden Health Connect üzerinden okuyan sade bir adım sayar.
                     Günlük hedefini koyarsın, hedefi tuttuğun günler seriye dönüşür; kaçırdığın bir günde
                     biriktirdiğin seri koruma hakkı seriyi korur.
                 </p>
-                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 28px;">
+                <p style="font-size: 15px; color: var(--color-fg-muted); line-height: 1.7; margin-bottom: 28px;" data-en="No account, and your step data never leaves the phone. Next up: events and competitions you join with a code, with friends or a community.">
                     Hesap açılmaz, adım verisi telefondan çıkmaz. Sırada arkadaşlarınla ya da bir toplulukla
                     kodla katılınan etkinlikler ve yarışmalar var.
                 </p>
 
                 <div class="glow-divider"></div>
 
-                <h2 style="font-size: 18px; color: #fff; margin: 24px 0 14px;">Öne çıkanlar</h2>
+                <h2 style="font-size: 18px; color: #fff; margin: 24px 0 14px;" data-en="Highlights">Öne çıkanlar</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 28px;">
-                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #63d2c0; box-shadow: 0 0 6px #63d2c0cc;"></span><span>Health Connect ile her saat ve telefon</span></div>
-                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #f2a65a; box-shadow: 0 0 6px #f2a65acc;"></span><span>Seri, seri koruma ve rozetler</span></div>
-                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #a39cab; box-shadow: 0 0 6px #a39cabcc;"></span><span>Hesapsız, veri telefonda kalır</span></div>
-                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #6ba8c4; box-shadow: 0 0 6px #6ba8c4cc;"></span><span>Açık / koyu tema, Türkçe ve İngilizce</span></div>
+                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #63d2c0; box-shadow: 0 0 6px #63d2c0cc;"></span><span data-en="Any watch or phone via Health Connect">Health Connect ile her saat ve telefon</span></div>
+                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #f2a65a; box-shadow: 0 0 6px #f2a65acc;"></span><span data-en="Streaks, streak freezes and badges">Seri, seri koruma ve rozetler</span></div>
+                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #a39cab; box-shadow: 0 0 6px #a39cabcc;"></span><span data-en="No account, data stays on the phone">Hesapsız, veri telefonda kalır</span></div>
+                    <div class="tech-tag" style="justify-content: flex-start;"><span class="dot-indicator" style="background-color: #6ba8c4; box-shadow: 0 0 6px #6ba8c4cc;"></span><span data-en="Light / dark theme, English and Turkish">Açık / koyu tema, Türkçe ve İngilizce</span></div>
                 </div>
 
-                <h2 style="font-size: 18px; color: #fff; margin: 0 0 14px;">Ekran görüntüleri</h2>
+                <h2 style="font-size: 18px; color: #fff; margin: 0 0 14px;" data-en="Screenshots">Ekran görüntüleri</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;">
                     <div class="glass-panel" style="height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-style: dashed; color: var(--color-fg-subtle);">
-                        <span>Yakında</span>
+                        <span data-en="Coming soon">Yakında</span>
                     </div>
                 </div>
 
                 <div class="glow-divider" style="margin: 28px 0 20px;"></div>
 
-                <h2 style="font-size: 18px; color: #fff; margin: 0 0 12px;">Veri ve gizlilik</h2>
-                <p style="font-size: 14px; color: var(--color-fg-muted); line-height: 1.7;">
+                <h2 style="font-size: 18px; color: #fff; margin: 0 0 12px;" data-en="Data and privacy">Veri ve gizlilik</h2>
+                <p style="font-size: 14px; color: var(--color-fg-muted); line-height: 1.7;" data-en="T-Steps reads only step data from Health Connect and processes it only on the device. This version has no account, server, ads or analytics; the app does not even ask for internet access. Details in the &lt;a href=&quot;privacy.html&quot; style=&quot;color: var(--orange-primary);&quot;&gt;privacy policy&lt;/a&gt;.">
                     T-Steps Health Connect'ten yalnızca adım verisini okur ve yalnızca cihazda işler. Hesap, sunucu,
                     reklam ve analitik bu sürümde yok; uygulama internet izni bile istemez.
                     Ayrıntılar <a href="privacy.html" style="color: var(--orange-primary);">gizlilik politikasında</a>.
@@ -98,9 +100,9 @@
         <footer class="gh-footer">
             <div>© 2026 Neron Studio (neronalp).</div>
             <ul class="gh-footer-links">
-                <li><a href="../../index.html">Ana Vitrin</a></li>
-                <li><a href="privacy.html">Gizlilik Politikası</a></li>
-                <li><a href="mailto:neron4design@gmail.com">İletişim</a></li>
+                <li><a href="../../index.html" data-en="Home">Ana Vitrin</a></li>
+                <li><a href="privacy.html" data-en="Privacy Policy">Gizlilik Politikası</a></li>
+                <li><a href="mailto:neron4design@gmail.com" data-en="Contact">İletişim</a></li>
             </ul>
         </footer>
 

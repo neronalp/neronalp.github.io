@@ -1144,3 +1144,13 @@ a:hover {
     height: 26px;
   }
 }
+
+/* TR/EN switch (assets/js/lang.js) */
+.lang-toggle {
+    font: inherit;
+    cursor: pointer;
+    background: transparent;
+    min-width: 44px;
+    justify-content: center;
+}
+[data-lang][hidden] { display: none !important; }
