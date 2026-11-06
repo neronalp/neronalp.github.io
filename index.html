@@ -406,19 +406,39 @@
                 switchTab(hash);
             }
 
-            // SynapsAura Turuncusu Isı Haritası Hücreleri
+            // SynapsAura Turuncusu Isı Haritası Hücreleri: rastgele dolar,
+            // sonra soldan sağa akan bir dalgayla sütun sütun yenilenir.
             const grid = document.getElementById('heatmapGrid');
             if (grid) {
-                grid.innerHTML = '';
-                for (let i = 0; i < 52 * 7; i++) {
-                    const cell = document.createElement('div');
-                    cell.className = 'h-cell';
-                    const rand = Math.random();
+                const COLS = 52, ROWS = 7;
+                const levels = ['h-1', 'h-2', 'h-3', 'h-4'];
+                const setLevel = (cell, boost) => {
+                    cell.classList.remove(...levels);
+                    const rand = Math.random() + boost;
                     if (rand > 0.88) cell.classList.add('h-4');
                     else if (rand > 0.75) cell.classList.add('h-3');
                     else if (rand > 0.6) cell.classList.add('h-2');
                     else if (rand > 0.4) cell.classList.add('h-1');
+                };
+                grid.innerHTML = '';
+                const cells = [];
+                for (let i = 0; i < COLS * ROWS; i++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'h-cell';
+                    setLevel(cell, 0);
                     grid.appendChild(cell);
+                    cells.push(cell);
+                }
+                if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    let col = 0;
+                    setInterval(() => {
+                        if (document.hidden) return;
+                        // The wave front glows a little brighter, then settles.
+                        for (let r = 0; r < ROWS; r++) setLevel(cells[r * COLS + col], 0.12);
+                        const behind = (col + COLS - 3) % COLS;
+                        for (let r = 0; r < ROWS; r++) setLevel(cells[r * COLS + behind], 0);
+                        col = (col + 1) % COLS;
+                    }, 140);
                 }
             }
 
