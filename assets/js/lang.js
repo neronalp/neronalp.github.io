@@ -6,6 +6,8 @@
   var KEY = 'lang';
   var lang = null;
   try { lang = localStorage.getItem(KEY); } catch (e) {}
+  // ?lang=tr / ?lang=en (apps link here in their own language)
+  var m = /[?&]lang=(tr|en)\b/.exec(location.search); if (m) lang = m[1];
   if (lang !== 'tr' && lang !== 'en') {
     lang = (navigator.language || 'tr').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
   }
