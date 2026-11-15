@@ -40,7 +40,7 @@
             <div class="markdown-container">
 <div data-lang="tr">
                 <h1>Yıldız Ocağı — Gizlilik Politikası</h1>
-                <p><em>Son Güncelleme: 8 Kasım 2026</em></p>
+                <p><em>Son Güncelleme: 15 Kasım 2026</em></p>
 
 
                 <p>
@@ -53,6 +53,7 @@
                     <li>Hesap açmanız <strong>gerekmez</strong>; giriş yapmazsınız.</li>
                     <li>Adınız, e-postanız, telefonunuz veya konumunuz gibi <strong>kimliğinizi tanımlayan hiçbir veri toplanmaz</strong>.</li>
                     <li>Oyun ilerlemeniz ve ayarlarınız <strong>yalnızca kendi cihazınızda</strong> saklanır.</li>
+                    <li>Günlük bulmaca sıralaması için yalnızca <strong>oyunun size rastgele verdiği takma ad ve günlük skorunuz</strong> sunucuya gönderilir (Google Firebase).</li>
                     <li>Reklam gösterimi için <strong>Google AdMob</strong> kullanılır.</li>
                 </ul>
 
@@ -67,7 +68,24 @@
                     <li>Ses tercihiniz ve seçili oyun modu</li>
                 </ul>
 
-                <h2>3. Reklamlar (Google AdMob)</h2>
+                <h2>3. Günlük Sıralama (Google Firebase)</h2>
+                <p>
+                    Günlük bulmacada oyuncuların skorlarını karşılaştırabilmesi için uygulama,
+                    <strong>Google Firebase</strong> (Authentication ve Cloud Firestore, sunucu konumu Avrupa) kullanır.
+                    Sizden hiçbir bilgi istenmez; oyun ilk kez sıralamaya skor gönderirken:
+                </p>
+                <ul>
+                    <li>Size <strong>rastgele bir takma ad</strong> verir (ör. "Kozmik Nebula 427"). Bu ad sizin tarafınızdan girilmez ve kimliğinizle ilişkili değildir.</li>
+                    <li>Firebase üzerinde <strong>anonim bir oturum</strong> açar. Bu oturum yalnızca rastgele bir kullanıcı kimliğinden oluşur; e-posta, telefon veya Google hesabı bilgisi içermez.</li>
+                    <li>Sunucuya yalnızca <strong>tarih, takma ad ve o günkü en yüksek skorunuz</strong> gönderilir.</li>
+                </ul>
+                <p>
+                    Takma adınız ve skorunuz o günün sıralamasında <strong>diğer oyunculara görünür</strong>.
+                    Firebase'in veri işleme koşulları:
+                    <a href="https://firebase.google.com/support/privacy" style="color: var(--orange-primary); font-weight: 600;" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
+                </p>
+
+                <h2>4. Reklamlar (Google AdMob)</h2>
                 <p>
                     Uygulama ücretsizdir ve gelirini reklamlardan elde eder. Reklamlar
                     <strong>Google AdMob</strong> tarafından sunulur. AdMob, ilgi alanlarına uygun reklam
@@ -83,7 +101,7 @@
                     reklamları kapatabilir veya Reklam Kimliğinizi sıfırlayabilirsiniz.
                 </p>
 
-                <h2>4. Kullanılmayanlar</h2>
+                <h2>5. Kullanılmayanlar</h2>
                 <p>
                     Şeffaflık adına belirtmek gerekirse, bu uygulama şunları <strong>kullanmaz</strong>:
                 </p>
@@ -92,41 +110,42 @@
                     <li>Sosyal medya giriş veya paylaşım entegrasyonu</li>
                     <li>Konum, kamera, mikrofon, rehber veya dosya erişimi</li>
                     <li>Uygulama içi satın alma</li>
-                    <li>Bulut kayıt veya sunucu tarafı kullanıcı hesabı</li>
+                    <li>Bulut kayıt veya e-posta / şifre ile kullanıcı hesabı</li>
                 </ul>
 
-                <h2>5. İzinler</h2>
+                <h2>6. İzinler</h2>
                 <p>
-                    Uygulama yalnızca reklamların yüklenebilmesi için <strong>internet erişimi</strong>
-                    kullanır. Birleştirme ve patlamalarda kısa bir <strong>titreşim</strong> geri bildirimi
+                    Uygulama <strong>internet erişimini</strong> yalnızca reklamları yüklemek ve günlük
+                    sıralamayı göstermek için kullanır. Birleştirme ve patlamalarda kısa bir <strong>titreşim</strong> geri bildirimi
                     verir; bu izin yalnızca cihazın titreşim motorunu çalıştırır, hiçbir veriye erişmez.
                     Reklamlar ödüllüdür ve yalnızca siz bir düğmeye bastığınızda gösterilir.
                 </p>
 
-                <h2>6. Çocukların Gizliliği</h2>
+                <h2>7. Çocukların Gizliliği</h2>
                 <p>
                     Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve onlardan bilerek kişisel
                     veri toplamaz. Bir çocuğun verisinin işlendiğini düşünüyorsanız aşağıdaki adresten
                     bize ulaşın, gerekli işlemi yapalım.
                 </p>
 
-                <h2>7. Veri Silme</h2>
+                <h2>8. Veri Silme</h2>
                 <p>
                     Cihazınızda tutulan tüm oyun verisi, uygulamayı kaldırdığınızda ya da
                     <em>Ayarlar → Uygulamalar → Yıldız Ocağı → Depolama → Verileri temizle</em> adımlarıyla
-                    silinir. Sunucularımızda size ait bir veri tutulmadığı için ayrıca bir silme talebi
-                    göndermenize gerek yoktur. Yine de soru veya talebiniz olursa
+                    silinir. Günlük sıralamaya gönderilen takma ad ve skorlar sunucuda kalır; silinmesini
+                    isterseniz oyundaki takma adınızı (sıralama ekranında görünür) aşağıdaki
+                    adrese yazmanız yeterlidir. Soru veya talepleriniz için
                     <a href="mailto:neron4design@gmail.com?subject=Yildiz%20Ocagi%20Veri%20Talebi" style="color: var(--orange-primary); font-weight: 600;">neron4design@gmail.com</a>
                     adresine yazabilirsiniz; talepler en geç 7 iş günü içinde yanıtlanır.
                 </p>
 
-                <h2>8. Değişiklikler</h2>
+                <h2>9. Değişiklikler</h2>
                 <p>
                     Bu politika güncellenirse bu sayfadaki "Son Güncelleme" tarihi değiştirilir.
                     Önemli değişiklikler uygulama içinde de duyurulur.
                 </p>
 
-                <h2>9. İletişim</h2>
+                <h2>10. İletişim</h2>
                 <p>
                     <strong>Geliştirici:</strong> Alp (Neron Studio)<br>
                     <strong>E-posta:</strong> <a href="mailto:neron4design@gmail.com" style="color: var(--orange-primary);">neron4design@gmail.com</a><br>
@@ -137,7 +156,7 @@
 <div data-lang="en">
 
                 <h1>Star Forge (Yıldız Ocağı) — Privacy Policy</h1>
-                <p><em>Last updated: 8 November 2026</em></p>
+                <p><em>Last updated: 15 November 2026</em></p>
 
                 <p>
                     This policy covers only the Android game <strong>Star Forge</strong>, developed by
@@ -149,6 +168,7 @@
                     <li>No account is required and you never sign in.</li>
                     <li>We collect <strong>no personally identifying information</strong> — no name, email, phone number or location.</li>
                     <li>Your progress and settings stay <strong>on your device only</strong>.</li>
+                    <li>For the daily puzzle ranking, only <strong>a random nickname the game gives you and your daily score</strong> are sent to a server (Google Firebase).</li>
                     <li><strong>Google AdMob</strong> is used to serve ads.</li>
                 </ul>
 
@@ -163,7 +183,24 @@
                     <li>Sound preference and the selected game mode</li>
                 </ul>
 
-                <h2>3. Advertising (Google AdMob)</h2>
+                <h2>3. Daily ranking (Google Firebase)</h2>
+                <p>
+                    So that players can compare daily puzzle scores, the app uses <strong>Google Firebase</strong>
+                    (Authentication and Cloud Firestore, servers in Europe). You are never asked for any information.
+                    The first time the game sends a score to the ranking it:
+                </p>
+                <ul>
+                    <li>Gives you a <strong>random nickname</strong> (e.g. "Cosmic Nebula 427"). You do not type it and it is not linked to your identity.</li>
+                    <li>Opens an <strong>anonymous session</strong> on Firebase. It consists only of a random user ID, with no email, phone number or Google account.</li>
+                    <li>Sends only <strong>the date, the nickname and your best score of that day</strong>.</li>
+                </ul>
+                <p>
+                    Your nickname and score are <strong>visible to other players</strong> in that day's ranking.
+                    Firebase's data processing terms:
+                    <a href="https://firebase.google.com/support/privacy" style="color: var(--orange-primary); font-weight: 600;" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
+                </p>
+
+                <h2>4. Advertising (Google AdMob)</h2>
                 <p>
                     The game is free and supported by ads served through <strong>Google AdMob</strong>.
                     AdMob may process device identifiers such as the <strong>Advertising ID</strong> in order
@@ -176,47 +213,47 @@
                     <em>Settings → Google → Ads</em> on your Android device.
                 </p>
 
-                <h2>4. What we do not use</h2>
+                <h2>5. What we do not use</h2>
                 <ul>
                     <li>Analytics or crash reporting (no Firebase Analytics, no Crashlytics)</li>
                     <li>Social sign-in or sharing integrations</li>
                     <li>Location, camera, microphone, contacts or file access</li>
                     <li>In-app purchases</li>
-                    <li>Cloud saves or server-side user accounts</li>
+                    <li>Cloud saves or email / password user accounts</li>
                 </ul>
 
-                <h2>5. Permissions</h2>
+                <h2>6. Permissions</h2>
                 <p>
-                    The app uses <strong>internet access</strong> solely to load ads. It gives short
+                    The app uses <strong>internet access</strong> only to load ads and show the daily ranking. It gives short
                     <strong>vibration</strong> feedback on merges and explosions; this permission only drives the
                     device's vibration motor and reads no data. All ads are rewarded ads and are shown only
                     when you tap a button to watch one.
                 </p>
 
-                <h2>6. Children's privacy</h2>
+                <h2>7. Children's privacy</h2>
                 <p>
                     The app is not directed at children under 13 and does not knowingly collect personal
                     data from them. If you believe a child's data has been processed, contact us and we
                     will act on it.
                 </p>
 
-                <h2>7. Data deletion</h2>
+                <h2>8. Data deletion</h2>
                 <p>
-                    All game data lives on your device and is removed when you uninstall the app, or via
-                    <em>Settings → Apps → Star Forge → Storage → Clear data</em>. We hold no data about you
-                    on any server, so no deletion request is necessary. For any question you can still
-                    write to
+                    Game data on your device is removed when you uninstall the app, or via
+                    <em>Settings → Apps → Star Forge → Storage → Clear data</em>. Nicknames and scores sent to
+                    the daily ranking stay on the server; to have yours deleted, send us your in-game nickname
+                    (shown in the ranking) at
                     <a href="mailto:neron4design@gmail.com?subject=Yildiz%20Ocagi%20Data%20Request" style="color: var(--orange-primary); font-weight: 600;">neron4design@gmail.com</a>;
                     requests are answered within 7 business days.
                 </p>
 
-                <h2>8. Changes</h2>
+                <h2>9. Changes</h2>
                 <p>
                     If this policy changes, the "Last updated" date above is revised. Significant changes
                     are also announced inside the app.
                 </p>
 
-                <h2>9. Contact</h2>
+                <h2>10. Contact</h2>
                 <p>
                     <strong>Developer:</strong> Alp (Neron Studio)<br>
                     <strong>Email:</strong> <a href="mailto:neron4design@gmail.com" style="color: var(--orange-primary);">neron4design@gmail.com</a><br>
