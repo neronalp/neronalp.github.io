@@ -1,0 +1,4 @@
+{
+  "_note": "Banner Age canlı ayarları. grants: ülke değiştirme hakları. Her id bir kez verilir; season yazılırsa yalnız o sezon geçerlidir. Yeni hak vermek için listeye yeni bir id ekle (ör. {\"id\": \"bizden-hak-1\"}).",
+  "grants": []
+}
