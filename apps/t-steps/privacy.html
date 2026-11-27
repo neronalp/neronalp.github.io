@@ -40,7 +40,7 @@
             <div class="markdown-container">
 <div data-lang="tr">
                 <h1>T-Steps — Gizlilik Politikası</h1>
-                <p><em>Son Güncelleme: 6 Kasım 2026</em></p>
+                <p><em>Son Güncelleme: 27 Kasım 2026</em></p>
 
                 <p>
                     Bu politika yalnızca <strong>T-Steps</strong> adlı Android adım sayar uygulamasını kapsar.
@@ -49,13 +49,22 @@
 
                 <h2>1. Kısaca</h2>
                 <ul>
-                    <li>T-Steps adımlarınızı <strong>Health Connect</strong>'ten okur. Yalnızca <strong>adım</strong> verisini ister, yalnızca okur; hiçbir şey yazmaz.</li>
+                    <li>T-Steps adımlarınızı <strong>telefonunuzun kendi adım sayacından</strong> (Google Play hizmetleri Recording API ve telefonun adım sensörü) okur. Bunun için yalnızca <strong>Fiziksel aktivite</strong> izni gerekir.</li>
+                    <li>İsterseniz saat veya bileklik adımları için <strong>Health Connect</strong> bağlayabilirsiniz. Yalnızca <strong>adım</strong> verisi okunur; hiçbir şey yazılmaz.</li>
                     <li>Hesap açmanız <strong>gerekmez</strong>; giriş yapmazsınız.</li>
                     <li>Adım verisi ve ilerlemeniz <strong>yalnızca kendi cihazınızda</strong> işlenir ve saklanır. Bize ya da üçüncü bir tarafa <strong>gönderilmez</strong>.</li>
                     <li>Bu sürümde <strong>reklam, analitik ve internet bağlantısı yoktur</strong>.</li>
                 </ul>
 
-                <h2>2. Health Connect'ten okunan veri</h2>
+                <h2>2. Telefonun adım sayacı</h2>
+                <p>
+                    <strong>Fiziksel aktivite</strong> iznini verdiğinizde uygulama, Google Play hizmetlerinin cihaz üzerinde
+                    tuttuğu adım kayıtlarını (Recording API; hesap gerekmez, yaklaşık 10 gün saklanır) ve uygulama açıkken
+                    telefonun adım sensörünü okur. Bu veriler cihazdan çıkmaz ve yalnızca aşağıdaki amaçlarla kullanılır.
+                    İzni Android ayarlarından istediğiniz zaman geri alabilirsiniz.
+                </p>
+
+                <h2>2a. Health Connect'ten okunan veri (isteğe bağlı)</h2>
                 <p>
                     Uygulama, izin verdiğiniz takdirde Health Connect'teki <strong>adım kayıtlarını</strong>
                     (adım sayısı, kaydın zaman aralığı ve kaydı yazan uygulamanın adı) okur. Bu veri şunlar için kullanılır:
@@ -82,7 +91,7 @@
                 <ul>
                     <li>Günlük adım toplamlarınız ve o günün hedefi (en fazla 400 gün)</li>
                     <li>Günlük hedefiniz, tema, dil ve açılış sesi tercihleriniz</li>
-                    <li>İsteğe bağlı olarak yazdığınız Tangled kullanıcı adınız</li>
+                    <li>Bildirim tercihiniz ve o gün son görülen adım sayısı (bildirimler için)</li>
                 </ul>
                 <p>
                     Android'in otomatik yedeklemesi açıksa bu yerel veriler, telefon değiştirdiğinizde geri
@@ -101,8 +110,10 @@
 
                 <h2>5. İzinler</h2>
                 <p>
-                    Uygulamanın istediği tek izin <strong>Health Connect adım okuma</strong> iznidir
-                    (<code>android.permission.health.READ_STEPS</code>). İnternet izni istenmez.
+                    <strong>Fiziksel aktivite</strong> (<code>android.permission.ACTIVITY_RECOGNITION</code>): telefonun adım sayacı için.
+                    <strong>Bildirimler</strong> (<code>android.permission.POST_NOTIFICATIONS</code>, Android 13+): günlük hedef hatırlatmaları için;
+                    bildirimler cihazda oluşturulur, sunucu kullanılmaz. İsteğe bağlı <strong>Health Connect adım okuma</strong>
+                    (<code>android.permission.health.READ_STEPS</code>): saat/bileklik bağlarsanız. İnternet izni istenmez.
                 </p>
 
                 <h2>6. Sonraki sürümler</h2>
@@ -141,7 +152,7 @@
 <div data-lang="en">
 
                 <h1>T-Steps — Privacy Policy</h1>
-                <p><em>Last updated: 6 November 2026</em></p>
+                <p><em>Last updated: 27 November 2026</em></p>
 
                 <p>
                     This policy covers only the Android step counter <strong>T-Steps</strong>, developed by
@@ -150,13 +161,22 @@
 
                 <h2>1. In short</h2>
                 <ul>
-                    <li>T-Steps reads your steps from <strong>Health Connect</strong>. It asks for <strong>steps</strong> only, and only reads; it writes nothing.</li>
+                    <li>T-Steps reads your steps from <strong>your phone's own step counter</strong> (Google Play services Recording API and the phone's step sensor). This needs only the <strong>Physical activity</strong> permission.</li>
+                    <li>You may optionally connect <strong>Health Connect</strong> for steps from a watch or band. Only <strong>steps</strong> are read; nothing is written.</li>
                     <li>No account is required and you never sign in.</li>
                     <li>Your step data and progress are processed and stored <strong>on your device only</strong> and are <strong>never sent</strong> to us or anyone else.</li>
                     <li>This version has <strong>no ads, no analytics and no internet access</strong>.</li>
                 </ul>
 
-                <h2>2. Data read from Health Connect</h2>
+                <h2>2. The phone's step counter</h2>
+                <p>
+                    When you allow <strong>Physical activity</strong>, the app reads the step records Google Play services keeps
+                    on your device (Recording API; no account, kept about 10 days) and, while the app is open, the phone's step
+                    sensor. This data never leaves your device and is used only for the purposes below. You can withdraw the
+                    permission at any time in Android settings.
+                </p>
+
+                <h2>2a. Data read from Health Connect (optional)</h2>
                 <p>
                     With your permission, the app reads <strong>step records</strong> from Health Connect (the step count,
                     the time span of each record and the name of the app that wrote it). They are used to:
@@ -182,7 +202,7 @@
                 <ul>
                     <li>Your daily step totals and that day's goal (up to 400 days)</li>
                     <li>Your daily goal, theme, language and launch-sound preferences</li>
-                    <li>The Tangled username you may choose to type in</li>
+                    <li>Your notification preference and the last step count seen that day (for notifications)</li>
                 </ul>
                 <p>
                     If Android's automatic backup is on, this local data may be backed up, encrypted, to
@@ -201,8 +221,10 @@
 
                 <h2>5. Permissions</h2>
                 <p>
-                    The only permission the app asks for is <strong>reading steps from Health Connect</strong>
-                    (<code>android.permission.health.READ_STEPS</code>). It does not ask for internet access.
+                    <strong>Physical activity</strong> (<code>android.permission.ACTIVITY_RECOGNITION</code>): for the phone's step counter.
+                    <strong>Notifications</strong> (<code>android.permission.POST_NOTIFICATIONS</code>, Android 13+): for daily goal reminders,
+                    created on the device with no server. Optional <strong>reading steps from Health Connect</strong>
+                    (<code>android.permission.health.READ_STEPS</code>): if you connect a watch or band. It does not ask for internet access.
                 </p>
 
                 <h2>6. Future versions</h2>
